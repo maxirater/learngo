@@ -39,18 +39,18 @@ func main() {
 	// . Uncomment the code below and start
 	//
 
-	// reqs := []int{
-	//	// 1st day
-	//	500, 600, 250,
-	//	// 2nd day
-	//	200, 400, 50,
-	//	// 3rd day
-	//	900, 800, 600,
-	//	// 4th day
-	//	750, 250, 100,
-	//	// last day
-	//	100, 150,
-	// }
+	reqs := []int{
+		// 1st day
+		500, 600, 250,
+		// 2nd day
+		200, 400, 50,
+		// 3rd day
+		900, 800, 600,
+		// 4th day
+		750, 250, 100,
+		// last day
+		100, 150,
+	}
 
 	//
 	// #2: Group the `reqs` per day into a slice named: `daily`
@@ -106,4 +106,7 @@ func main() {
 	// etc., and then try to solve it again.
 	//
 	// ------------------------------------------------------------------------
+
+	// I dont understand the idea of needing a daily slice, the information is already
+	// formated in a slice
 }

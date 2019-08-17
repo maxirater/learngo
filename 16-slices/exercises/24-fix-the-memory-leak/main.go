@@ -65,3 +65,5 @@ func main() {
 	api.Report()
 	fmt.Fprintln(ioutil.Discard, temps[0])
 }
+
+// Inanc: I have no idea how to even start on this problem

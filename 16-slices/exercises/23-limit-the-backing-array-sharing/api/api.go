@@ -8,7 +8,10 @@ func Read(start, stop int) []int {
 	// ----------------------------------------
 	// RESTRICTIONS — ONLY ADD YOUR CODE HERE
 
-	portion := temps[start:stop]
+	// portion := temps[start:stop]
+
+	portion := make([]int, len(temps))     // not working, I dont know what to do
+	portion = append(portion, temps[:]...) // understanding this problem relates to the lyrics execise
 
 	// ----------------------------------------
 	return portion

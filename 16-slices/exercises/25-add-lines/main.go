@@ -1,6 +1,8 @@
 package main
 
 import (
+	"strings"
+
 	s "github.com/inancgumus/prettyslice"
 )
 
@@ -24,7 +26,7 @@ import (
 //
 //  You will get across something like this all the time
 //  in your gopher life. Believe me, learning how to
-//  solve this exercise will make you a better hopher.
+//  solve this exercise will make you a better hopher.   <<< Inanc: misspelled gopher (hopher)
 //
 //
 // RESTRICTIONS
@@ -67,7 +69,7 @@ func main() {
 	// UNCOMMENT THE VARIABLE BELOW THEN START!
 	//
 
-	// lyric := strings.Fields(`yesterday all my troubles seemed so far away now it looks as though they are here to stay oh i believe in yesterday`)
+	lyric := strings.Fields(`yesterday all my troubles seemed so far away now it looks as though they are here to stay oh i believe in yesterday`)
 
 	//
 	// RESTRICTION EXPLANATION:
@@ -87,9 +89,10 @@ func main() {
 	//     You need to put each lyric sentence
 	//     + a newline character into this buffer
 	//
-
+	const sentenceLength = len("yesterday all my troubles seemed so far away")
+	const totalLength = len(lyric) + 2
 	// I name the buffer: `fix`, you can name it however you want
-	// fix := make(...)
+	fix := make([]string, totalLength)
 
 	// ========================================================================
 	//
@@ -100,23 +103,27 @@ func main() {
 	//     lyric slice.
 	//
 
-	// cutpoints := []int{...}
+	cutpoints := []string{"\n"} // Im not sure if this is correct
 
 	// ========================================================================
 	//
 	// #3: CREATE A LOOP AND COPY THE SENTENCES INTO THE BUFFER
 	//
+	sentenceCount := 0
+	for i, val := range totalLength {
+		//   Use the `copy` function to copy from the `lyric` slice to the buffer.
+		//
+		//   Copy a newline character (in a string) to the buffer after each sentence.
+		//
+		//   You can use slicing here for filling the new buffer.
+		//
+		//   Uncomment this to aid debugging (to see how the fix slice changes)
 
-	// for ... {
-	//   Use the `copy` function to copy from the `lyric` slice to the buffer.
-	//
-	//   Copy a newline character (in a string) to the buffer after each sentence.
-	//
-	//   You can use slicing here for filling the new buffer.
-	//
-	//   Uncomment this to aid debugging (to see how the fix slice changes)
-	//   s.Show("fix slice", fix)
-	// }
+		if sentenceCount == sentenceLength {
+
+		}
+		s.Show("fix slice", fix)
+	}
 
 	// ========================================================================
 	//
@@ -124,4 +131,8 @@ func main() {
 	//
 
 	// ...
+
+	// Inanc:
+	// I really dont understand the purpose of using a for loop when we are just copying slices
+	// and so just using indexes of slices to put into the copy function
 }
