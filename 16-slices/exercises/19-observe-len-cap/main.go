@@ -91,7 +91,7 @@ func main() {
 	//
 	p("adding 5 more elements")
 	for i := 0; i <= len(games); i++ { // INANC HERE <<<<<<<<<<<<<<<<<
-		zero = append(zero, "ho") // in your solution code you add to a new slice named s
+		zero = append(zero, "ho") // in your solution code you add to a new slice named s, why?
 		fmt.Printf("zero slice: len: %d cap: %d\n", len(zero), cap(zero))
 
 	}
