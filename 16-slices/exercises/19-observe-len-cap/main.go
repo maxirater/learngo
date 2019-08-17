@@ -90,9 +90,9 @@ func main() {
 	// 6. notice the growth of the capacity after the 5th append
 	//
 	p("adding 5 more elements")
-	for i := 0; i <= len(games); i++ {
-		zero = append(zero, "ho")
-		fmt.Printf("zero slice: len: %d cap: %d\n", i, len(zero), cap(zero))
+	for i := 0; i <= len(games); i++ { // INANC HERE <<<<<<<<<<<<<<<<<
+		zero = append(zero, "ho") // in your solution code you add to a new slice named s
+		fmt.Printf("zero slice: len: %d cap: %d\n", len(zero), cap(zero))
 
 	}
 	// Use this slice's elements to append to the new slice:
